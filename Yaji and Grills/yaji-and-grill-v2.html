@@ -1,0 +1,3653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YAJI & GRILL | Azare, Bauchi</title>
+
+<meta
+  name="description"
+  content="YAJI & GRILL — fresh grills, suya, burgers, wraps, rice, noodles and more in Azare, Bauchi."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:wght@400;500;600;700;800&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #0b0a09;
+  color: #f8eee4;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+  --black: #0b0a09;
+  --black-2: #11100e;
+  --coal: #191613;
+  --coal-2: #211d19;
+
+  --cream: #f8eee4;
+  --muted: #a99d91;
+  --line: #342e29;
+
+  --red: #d9252e;
+  --red-bright: #ff3c43;
+
+  --orange: #f36a24;
+  --gold: #e6a83d;
+
+  --green: #20a45b;
+
+  --radius: 14px;
+
+  --max: 1180px;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.container {
+  width: min(var(--max), calc(100% - 40px));
+  margin-inline: auto;
+}
+
+section {
+  padding: 90px 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--red-bright);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 48px;
+
+  padding: 13px 22px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: var(--red);
+  color: white;
+
+  font-weight: 800;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.btn:hover {
+  background: var(--red-bright);
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.65);
+}
+
+.btn.secondary:hover {
+  background: white;
+  color: var(--black);
+}
+
+.btn.full {
+  width: 100%;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 30;
+
+  padding: 20px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.65),
+      transparent
+    );
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 800;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: var(--red);
+
+  font-size: 20px;
+}
+
+.brand-name {
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: 1.05rem;
+}
+
+.brand small {
+  display: block;
+
+  color: #c7b9ae;
+
+  font-size: .65rem;
+  font-weight: 500;
+
+  letter-spacing: .04em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  color: #eee2d8;
+
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: var(--red-bright);
+}
+
+.nav-order {
+  min-height: 42px;
+  padding: 10px 17px;
+}
+
+
+/* =========================================================
+   HERO CAROUSEL
+========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100svh;
+  height: 100svh;
+
+  overflow: hidden;
+
+  background: #090807;
+
+  border-bottom: 5px solid var(--red);
+}
+
+.hero-slides {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: scale(1.06);
+
+  transition:
+    opacity 1s ease,
+    visibility 1s ease,
+    transform 6s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+
+  transform: scale(1);
+}
+
+
+/* Cinematic overlay */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,4,3,.9) 0%,
+      rgba(5,4,3,.73) 30%,
+      rgba(5,4,3,.3) 65%,
+      rgba(5,4,3,.48) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.85),
+      transparent 55%
+    );
+}
+
+
+/* Hero content */
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+
+  width: min(var(--max), calc(100% - 40px));
+
+  margin-inline: auto;
+
+  padding-top: 90px;
+}
+
+.hero-kicker {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #ff544f;
+
+  font-size: .76rem;
+  font-weight: 800;
+
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 850px;
+
+  margin-bottom: 25px;
+
+  font-size: clamp(3.2rem, 8vw, 7.2rem);
+
+  letter-spacing: -.025em;
+}
+
+.hero h1 span {
+  color: var(--red-bright);
+}
+
+.hero-copy {
+  max-width: 570px;
+
+  margin-bottom: 34px;
+
+  color: rgba(255,255,255,.88);
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+
+/* Arrows */
+
+.hero-arrow {
+  position: absolute;
+
+  top: 50%;
+  z-index: 10;
+
+  width: 50px;
+  height: 50px;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+
+  background: rgba(0,0,0,.3);
+
+  color: white;
+
+  font-size: 2rem;
+  line-height: 1;
+
+  backdrop-filter: blur(10px);
+
+  transition: .2s ease;
+}
+
+.hero-arrow:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.hero-prev {
+  left: 25px;
+}
+
+.hero-next {
+  right: 25px;
+}
+
+
+/* Dots */
+
+.hero-dots {
+  position: absolute;
+
+  left: 50%;
+  bottom: 30px;
+
+  z-index: 10;
+
+  display: flex;
+  gap: 8px;
+
+  transform: translateX(-50%);
+}
+
+.hero-dot {
+  width: 30px;
+  height: 4px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 99px;
+
+  background: rgba(255,255,255,.4);
+
+  transition: .3s ease;
+}
+
+.hero-dot.active {
+  width: 55px;
+  background: var(--red-bright);
+}
+
+
+/* =========================================================
+   INFO STRIP
+========================================================= */
+
+.strip {
+  background: var(--red);
+
+  padding: 15px 0;
+}
+
+.strip-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px 45px;
+
+  font-size: .85rem;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   SECTION HEAD
+========================================================= */
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  gap: 40px;
+
+  margin-bottom: 45px;
+}
+
+.section-head > div {
+  max-width: 600px;
+}
+
+.section-head p {
+  max-width: 440px;
+
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   FEATURED
+========================================================= */
+
+.featured {
+  background: var(--black-2);
+}
+
+.featured-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.feature-card {
+  overflow: hidden;
+
+  background: var(--coal);
+
+  border: 1px solid var(--line);
+
+  border-radius: var(--radius);
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--red);
+}
+
+.feature-image {
+  position: relative;
+
+  height: 290px;
+
+  overflow: hidden;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform .5s ease;
+}
+
+.feature-card:hover img {
+  transform: scale(1.05);
+}
+
+.feature-badge {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  z-index: 2;
+
+  padding: 7px 11px;
+
+  border-radius: 99px;
+
+  background: var(--red);
+
+  color: white;
+
+  font-size: .7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.feature-body {
+  padding: 22px;
+}
+
+.feature-body h3 {
+  margin-bottom: 8px;
+
+  font-size: 1.4rem;
+}
+
+.feature-body p {
+  margin-bottom: 17px;
+
+  color: var(--muted);
+
+  font-size: .9rem;
+}
+
+.feature-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  color: var(--cream);
+
+  font-weight: 800;
+}
+
+.add-btn {
+  width: 42px;
+  height: 42px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: var(--red);
+
+  color: white;
+
+  font-size: 1.5rem;
+
+  transition: .2s ease;
+}
+
+.add-btn:hover {
+  background: var(--red-bright);
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu-section {
+  background: var(--black);
+}
+
+.tabs {
+  display: flex;
+
+  gap: 8px;
+
+  overflow-x: auto;
+
+  padding-bottom: 8px;
+
+  margin-bottom: 30px;
+
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  flex: 0 0 auto;
+
+  padding: 10px 17px;
+
+  border: 1px solid var(--line);
+  border-radius: 99px;
+
+  background: var(--coal);
+
+  color: var(--muted);
+
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.tab:hover,
+.tab.active {
+  background: var(--red);
+  border-color: var(--red);
+
+  color: white;
+}
+
+.menu-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.menu-item {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 18px;
+
+  background: var(--coal);
+
+  border: 1px solid var(--line);
+  border-radius: 10px;
+
+  transition: border-color .2s ease;
+}
+
+.menu-item:hover {
+  border-color: var(--red);
+}
+
+.menu-item-main {
+  min-width: 0;
+}
+
+.menu-item h3 {
+  margin-bottom: 4px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.menu-item p {
+  color: var(--muted);
+
+  font-size: .8rem;
+}
+
+.menu-item-side {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+.mini-add {
+  padding: 8px 12px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: var(--red);
+
+  color: white;
+
+  font-size: .75rem;
+  font-weight: 800;
+}
+
+.mini-add:hover {
+  background: var(--red-bright);
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story {
+  background: var(--coal);
+}
+
+.story-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.story-photo {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: var(--radius);
+
+  border: 1px solid var(--line);
+}
+
+.story-photo img {
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+}
+
+.story-content h2 {
+  margin: 12px 0 20px;
+}
+
+.story-content p {
+  color: var(--muted);
+
+  margin-bottom: 18px;
+}
+
+.story-points {
+  display: grid;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.story-point {
+  display: flex;
+
+  gap: 12px;
+
+  align-items: flex-start;
+}
+
+.story-point-icon {
+  display: grid;
+  place-items: center;
+
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--red);
+
+  font-size: .8rem;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.how {
+  background: var(--black-2);
+}
+
+.steps {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.step {
+  padding: 30px;
+
+  background: var(--coal);
+
+  border: 1px solid var(--line);
+
+  border-radius: var(--radius);
+}
+
+.step-number {
+  display: grid;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+
+  background: var(--red);
+
+  font-family: "Alfa Slab One", serif;
+}
+
+.step h3 {
+  margin-bottom: 9px;
+
+  font-size: 1.25rem;
+}
+
+.step p {
+  color: var(--muted);
+
+  font-size: .9rem;
+}
+
+
+/* =========================================================
+   VISIT
+========================================================= */
+
+.visit {
+  background: var(--black);
+}
+
+.visit-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.visit-card {
+  padding: 28px;
+
+  background: var(--coal);
+
+  border: 1px solid var(--line);
+
+  border-radius: var(--radius);
+}
+
+.visit-icon {
+  font-size: 1.8rem;
+
+  margin-bottom: 15px;
+}
+
+.visit-card h3 {
+  margin-bottom: 8px;
+
+  font-size: 1.25rem;
+}
+
+.visit-card p {
+  color: var(--muted);
+
+  font-size: .9rem;
+}
+
+.visit-card a {
+  color: var(--red-bright);
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final {
+  padding: 100px 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,110,35,.25),
+      transparent 50%
+    ),
+    var(--red);
+}
+
+.final-content {
+  max-width: 760px;
+
+  margin-inline: auto;
+
+  text-align: center;
+}
+
+.final h2 {
+  margin-bottom: 18px;
+}
+
+.final p {
+  margin-bottom: 28px;
+
+  color: rgba(255,255,255,.85);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  padding: 30px 0;
+
+  background: #080706;
+
+  border-top: 1px solid var(--line);
+
+  color: var(--muted);
+
+  font-size: .8rem;
+}
+
+.footer-inner {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.footer-brand {
+  color: white;
+
+  font-family: "Alfa Slab One", serif;
+}
+
+
+/* =========================================================
+   FLOATING CART
+========================================================= */
+
+.float-cart {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+
+  z-index: 40;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 13px 18px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: var(--green);
+
+  color: white;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.45);
+
+  transition: .2s ease;
+}
+
+.float-cart:hover {
+  transform: translateY(-2px);
+}
+
+.cart-count {
+  display: grid;
+  place-items: center;
+
+  min-width: 23px;
+  height: 23px;
+
+  padding: 0 5px;
+
+  border-radius: 99px;
+
+  background: white;
+
+  color: var(--green);
+
+  font-size: .72rem;
+}
+
+
+/* =========================================================
+   CART OVERLAY
+========================================================= */
+
+.cart-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 49;
+
+  background: rgba(0,0,0,.65);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: .3s ease;
+}
+
+.cart-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================================================
+   CART DRAWER
+========================================================= */
+
+.cart {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 50;
+
+  width: min(460px, 100%);
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--black-2);
+
+  border-left: 1px solid var(--line);
+
+  transform: translateX(100%);
+
+  transition: transform .3s ease;
+}
+
+.cart.open {
+  transform: translateX(0);
+}
+
+.cart-head {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.cart-head h2 {
+  font-size: 1.8rem;
+}
+
+.close {
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid var(--line);
+  border-radius: 50%;
+
+  background: var(--coal);
+
+  color: white;
+
+  font-size: 1.6rem;
+}
+
+.cart-body {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 18px;
+}
+
+.cart-empty {
+  padding: 60px 20px;
+
+  text-align: center;
+
+  color: var(--muted);
+}
+
+.cart-empty h3 {
+  color: white;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.cart-line {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.cart-line h4 {
+  margin-bottom: 3px;
+
+  font-size: .95rem;
+}
+
+.cart-line small {
+  color: var(--muted);
+
+  font-size: .72rem;
+}
+
+.cart-controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 10px;
+}
+
+.cart-controls button {
+  display: grid;
+  place-items: center;
+
+  width: 28px;
+  height: 28px;
+
+  border: 1px solid var(--line);
+  border-radius: 50%;
+
+  background: var(--coal);
+
+  color: white;
+}
+
+.cart-controls button:hover {
+  background: var(--red);
+}
+
+.cart-controls output {
+  min-width: 22px;
+
+  text-align: center;
+
+  font-size: .8rem;
+  font-weight: 800;
+}
+
+.checkout {
+  padding: 18px;
+
+  border-top: 1px solid var(--line);
+
+  background: var(--coal);
+}
+
+.choice {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 7px;
+
+  margin-bottom: 12px;
+}
+
+.choice button {
+  padding: 10px;
+
+  border: 1px solid var(--line);
+  border-radius: 8px;
+
+  background: var(--black);
+
+  color: var(--muted);
+
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+.choice button.active {
+  border-color: var(--red);
+
+  background: var(--red);
+
+  color: white;
+}
+
+.checkout input,
+.checkout select,
+.checkout textarea {
+  width: 100%;
+
+  margin-bottom: 10px;
+
+  padding: 12px;
+
+  border: 1px solid var(--line);
+  border-radius: 8px;
+
+  outline: none;
+
+  background: var(--black);
+
+  color: white;
+}
+
+.checkout input:focus,
+.checkout select:focus,
+.checkout textarea:focus {
+  border-color: var(--red);
+}
+
+.checkout textarea {
+  resize: vertical;
+}
+
+.pickup-fields,
+.delivery-fields {
+  display: none;
+}
+
+.pickup-fields.show,
+.delivery-fields.show {
+  display: block;
+}
+
+.cart-total {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin: 12px 0 15px;
+
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.whatsapp {
+  background: var(--green);
+}
+
+.whatsapp:hover {
+  background: #28b966;
+}
+
+.whatsapp:disabled {
+  opacity: .4;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.checkout-note {
+  margin-top: 9px;
+
+  color: var(--muted);
+
+  text-align: center;
+
+  font-size: .7rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-image {
+    height: 320px;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-head {
+    display: block;
+  }
+
+  .section-head p {
+    margin-top: 15px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  section {
+    padding: 65px 0;
+  }
+
+  .container {
+    width: min(100% - 30px, var(--max));
+  }
+
+  .hero-content {
+    padding-top: 100px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 5rem);
+  }
+
+  .hero-copy {
+    max-width: 500px;
+  }
+
+  .hero-arrow {
+    display: none;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    flex: 1;
+  }
+
+  .strip-inner {
+    gap: 8px 20px;
+
+    font-size: .72rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-item {
+    align-items: flex-start;
+  }
+
+  .menu-item-side {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .story-photo img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .brand small {
+    display: none;
+  }
+
+  .nav-order {
+    font-size: .75rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-dots {
+    bottom: 20px;
+  }
+
+  .choice {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-slide {
+    transition: opacity .3s ease;
+    transform: none;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     NAV
+====================================================== -->
+
+<nav class="nav">
+
+  <div class="container nav-inner">
+
+    <a class="brand" href="#top">
+
+      <span class="brand-mark">🔥</span>
+
+      <span>
+        <span class="brand-name">YAJI & GRILL</span>
+        <small>Azare • Northern Grill House</small>
+      </span>
+
+    </a>
+
+
+    <div class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Kitchen</a>
+      <a href="#visit">Visit</a>
+    </div>
+
+
+    <button class="btn nav-order" onclick="openCart()">
+      Order now →
+    </button>
+
+  </div>
+
+</nav>
+
+
+
+<!-- ======================================================
+     HERO CAROUSEL
+====================================================== -->
+
+<section class="hero" id="top">
+
+  <div class="hero-slides">
+
+
+    <!-- SLIDE 1 -->
+
+    <div
+      class="hero-slide active"
+      style="background-image:url('./a_home1.jpg');"
+    >
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <span class="hero-kicker">
+          YAJI & GRILL • AZARE
+        </span>
+
+        <h1>
+          Fire.<br>
+          <span>Yaji. Good food.</span>
+        </h1>
+
+        <p class="hero-copy">
+          Fresh grills, signature suya, burgers, wraps,
+          rice and more — made for serious cravings.
+        </p>
+
+        <div class="hero-actions">
+
+          <button
+            class="btn"
+            onclick="openCart()"
+          >
+            Order on WhatsApp
+          </button>
+
+          <a
+            href="#menu"
+            class="btn secondary"
+          >
+            Explore menu
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- SLIDE 2 -->
+
+    <div
+      class="hero-slide"
+      style="background-image:url('./a_rice.jpg');"
+    >
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <span class="hero-kicker">
+          MORE THAN SUYA
+        </span>
+
+        <h1>
+          Good food.<br>
+          <span>Done properly.</span>
+        </h1>
+
+        <p class="hero-copy">
+          From signature rice and noodles to grilled
+          favourites, there is something for every craving.
+        </p>
+
+        <div class="hero-actions">
+
+          <button
+            class="btn"
+            onclick="openCart()"
+          >
+            Order now
+          </button>
+
+          <a
+            href="#menu"
+            class="btn secondary"
+          >
+            See the menu
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- SLIDE 3 -->
+
+    <div
+      class="hero-slide"
+      style="background-image:url('./a_wrap.jpg');"
+    >
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <span class="hero-kicker">
+          GRILLED • SPICED • FRESH
+        </span>
+
+        <h1>
+          Come hungry.<br>
+          <span>Leave satisfied.</span>
+        </h1>
+
+        <p class="hero-copy">
+          Suya, wraps, burgers, grills and signature
+          mains, prepared fresh to order.
+        </p>
+
+        <div class="hero-actions">
+
+          <button
+            class="btn"
+            onclick="openCart()"
+          >
+            Build your order
+          </button>
+
+          <a
+            href="#menu"
+            class="btn secondary"
+          >
+            Explore menu
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- PREVIOUS -->
+
+  <button
+    class="hero-arrow hero-prev"
+    type="button"
+    aria-label="Previous slide"
+  >
+    ‹
+  </button>
+
+
+  <!-- NEXT -->
+
+  <button
+    class="hero-arrow hero-next"
+    type="button"
+    aria-label="Next slide"
+  >
+    ›
+  </button>
+
+
+  <!-- DOTS -->
+
+  <div class="hero-dots">
+
+    <button
+      class="hero-dot active"
+      data-slide="0"
+      aria-label="Slide 1"
+    ></button>
+
+    <button
+      class="hero-dot"
+      data-slide="1"
+      aria-label="Slide 2"
+    ></button>
+
+    <button
+      class="hero-dot"
+      data-slide="2"
+      aria-label="Slide 3"
+    ></button>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     STRIP
+====================================================== -->
+
+<div class="strip">
+
+  <div class="container strip-inner">
+
+    <span>🔥 Grilled fresh</span>
+    <span>🥩 Signature suya</span>
+    <span>🛍️ Pickup</span>
+    <span>🛵 Delivery</span>
+    <span>💬 WhatsApp ordering</span>
+
+  </div>
+
+</div>
+
+
+
+<main>
+
+
+<!-- ======================================================
+     FEATURED
+====================================================== -->
+
+<section class="featured">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="eyebrow">
+          Signature selection
+        </span>
+
+        <h2>
+          Start with the grill.
+        </h2>
+
+      </div>
+
+      <p>
+        Suya is the signature, but there is plenty more
+        on the menu. Add your favourites and send your
+        order straight to WhatsApp.
+      </p>
+
+    </div>
+
+
+    <div class="featured-grid" id="featuredGrid"></div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     FULL MENU
+====================================================== -->
+
+<section
+  class="menu-section"
+  id="menu"
+>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="eyebrow">
+          Full menu
+        </span>
+
+        <h2>
+          Pick your plate.
+        </h2>
+
+      </div>
+
+      <p>
+        Browse the full YAJI & GRILL menu and build
+        your order before sending it to WhatsApp.
+      </p>
+
+    </div>
+
+
+    <div
+      class="tabs"
+      id="tabs"
+    ></div>
+
+
+    <div
+      class="menu-grid"
+      id="menuGrid"
+    ></div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     STORY
+====================================================== -->
+
+<section
+  class="story"
+  id="story"
+>
+
+  <div class="container story-grid">
+
+
+    <div class="story-photo">
+
+      <!-- Your supplied real YAJI & GRILL photo -->
+      <img
+        src="a_wrap.jpg"
+        alt="YAJI & GRILL branded packaging"
+      >
+
+    </div>
+
+
+    <div class="story-content">
+
+      <span class="eyebrow">
+        Our kitchen
+      </span>
+
+      <h2>
+        Built around good food and real flavour.
+      </h2>
+
+      <p>
+        YAJI & GRILL brings together Northern-inspired
+        grilling and everyday comfort food in one place.
+      </p>
+
+      <p>
+        From signature beef suya and balangu to burgers,
+        wraps, rice, noodles and drinks, the menu is built
+        for both quick cravings and proper meals.
+      </p>
+
+
+      <div class="story-points">
+
+        <div class="story-point">
+
+          <span class="story-point-icon">
+            ✓
+          </span>
+
+          <div>
+            <strong>Grilled fresh</strong>
+            <p>Prepared for your order.</p>
+          </div>
+
+        </div>
+
+
+        <div class="story-point">
+
+          <span class="story-point-icon">
+            ✓
+          </span>
+
+          <div>
+            <strong>Signature yaji</strong>
+            <p>Our food is built around bold flavour.</p>
+          </div>
+
+        </div>
+
+
+        <div class="story-point">
+
+          <span class="story-point-icon">
+            ✓
+          </span>
+
+          <div>
+            <strong>Pickup or delivery</strong>
+            <p>Order ahead through WhatsApp.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     HOW IT WORKS
+====================================================== -->
+
+<section class="how">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="eyebrow">
+          Simple ordering
+        </span>
+
+        <h2>
+          From craving to order.
+        </h2>
+
+      </div>
+
+      <p>
+        No complicated checkout. Build your order,
+        choose pickup or delivery, then send it to us
+        through WhatsApp.
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+
+      <div class="step">
+
+        <div class="step-number">
+          1
+        </div>
+
+        <h3>
+          Choose your food
+        </h3>
+
+        <p>
+          Browse the menu and add whatever you want
+          to your order.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          2
+        </div>
+
+        <h3>
+          Choose pickup or delivery
+        </h3>
+
+        <p>
+          Tell us when you want to pick up or where
+          you want your food delivered.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          3
+        </div>
+
+        <h3>
+          Send on WhatsApp
+        </h3>
+
+        <p>
+          Your order is automatically written out.
+          Review it and send it to YAJI & GRILL.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     VISIT
+====================================================== -->
+
+<section
+  class="visit"
+  id="visit"
+>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="eyebrow">
+          Find us
+        </span>
+
+        <h2>
+          Come eat.
+        </h2>
+
+      </div>
+
+      <p>
+        Prefer to visit in person? Find YAJI & GRILL
+        on General Hospital Road in Azare.
+      </p>
+
+    </div>
+
+
+    <div class="visit-grid">
+
+
+      <div class="visit-card">
+
+        <div class="visit-icon">
+          📍
+        </div>
+
+        <h3>
+          Location
+        </h3>
+
+        <p>
+          General Hospital Road<br>
+          Azare, Bauchi State, Nigeria
+        </p>
+
+        <br>
+
+        <a
+          href="https://maps.app.goo.gl/h6euikNJJcVPcs4F8?g_st=ac"
+          target="_blank"
+          rel="noopener"
+        >
+          Open in Google Maps →
+        </a>
+
+      </div>
+
+
+      <div class="visit-card">
+
+        <div class="visit-icon">
+          💬
+        </div>
+
+        <h3>
+          WhatsApp
+        </h3>
+
+        <p>
+          Order your food, ask a question or
+          contact us directly.
+        </p>
+
+        <br>
+
+        <a
+          href="https://wa.me/2348037485494"
+          target="_blank"
+          rel="noopener"
+        >
+          Chat on WhatsApp →
+        </a>
+
+      </div>
+
+
+      <div class="visit-card">
+
+        <div class="visit-icon">
+          📱
+        </div>
+
+        <h3>
+          Instagram
+        </h3>
+
+        <p>
+          Follow YAJI & GRILL for food,
+          updates and new offerings.
+        </p>
+
+        <br>
+
+        <a
+          href="https://instagram.com/yajingrill"
+          target="_blank"
+          rel="noopener"
+        >
+          @yajingrill →
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     FINAL CTA
+====================================================== -->
+
+<section class="final">
+
+  <div class="container final-content">
+
+    <span class="eyebrow">
+      Fresh off the grill
+    </span>
+
+    <h2>
+      Hungry?
+      Your order is a tap away.
+    </h2>
+
+    <p>
+      Choose your food, tell us where you want it,
+      and send the order straight to WhatsApp.
+    </p>
+
+    <button
+      class="btn"
+      onclick="openCart()"
+    >
+      Build my order →
+    </button>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <div>
+
+      <div class="footer-brand">
+        YAJI & GRILL
+      </div>
+
+      <p>
+        Azare, Bauchi State, Nigeria
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <p>
+        © <span id="year"></span>
+        YAJI & GRILL
+      </p>
+
+      <p>
+        www.yajingrill.com
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<!-- ======================================================
+     FLOATING CART
+====================================================== -->
+
+<button
+  class="float-cart"
+  onclick="openCart()"
+>
+
+  🛒
+
+  <span id="floatText">
+    Order
+  </span>
+
+  <span
+    class="cart-count"
+    id="cartCount"
+  >
+    0
+  </span>
+
+</button>
+
+
+
+<!-- ======================================================
+     CART OVERLAY
+====================================================== -->
+
+<div
+  class="cart-overlay"
+  onclick="closeCart()"
+></div>
+
+
+
+<!-- ======================================================
+     CART
+====================================================== -->
+
+<aside
+  class="cart"
+  id="cart"
+  aria-label="Your order"
+>
+
+
+  <div class="cart-head">
+
+    <h2>
+      Your order
+    </h2>
+
+    <button
+      class="close"
+      onclick="closeCart()"
+      aria-label="Close order"
+    >
+      ×
+    </button>
+
+  </div>
+
+
+  <div class="cart-body">
+
+    <div id="cartLines"></div>
+
+  </div>
+
+
+  <div class="checkout">
+
+
+    <!-- Pickup / Delivery -->
+
+    <div class="choice">
+
+      <button
+        class="active"
+        data-type="Pickup"
+        onclick="setOrderType('Pickup', this)"
+      >
+        🛍 Pickup
+      </button>
+
+      <button
+        data-type="Delivery"
+        onclick="setOrderType('Delivery', this)"
+      >
+        🛵 Delivery
+      </button>
+
+    </div>
+
+
+    <!-- Name -->
+
+    <input
+      id="customerName"
+      type="text"
+      placeholder="Your name"
+      autocomplete="name"
+    >
+
+
+    <!-- Pickup -->
+
+    <div
+      class="pickup-fields show"
+      id="pickupFields"
+    >
+
+      <select id="pickupTime">
+
+        <option value="">
+          Pickup time
+        </option>
+
+        <option>
+          ASAP
+        </option>
+
+        <option>
+          4:30 PM
+        </option>
+
+        <option>
+          5:00 PM
+        </option>
+
+        <option>
+          5:30 PM
+        </option>
+
+        <option>
+          6:00 PM
+        </option>
+
+        <option>
+          6:30 PM
+        </option>
+
+        <option>
+          7:00 PM
+        </option>
+
+        <option>
+          7:30 PM
+        </option>
+
+        <option>
+          8:00 PM
+        </option>
+
+        <option>
+          8:30 PM
+        </option>
+
+        <option>
+          9:00 PM
+        </option>
+
+        <option>
+          9:30 PM
+        </option>
+
+        <option>
+          10:00 PM
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <!-- Delivery -->
+
+    <div
+      class="delivery-fields"
+      id="deliveryFields"
+    >
+
+      <input
+        id="deliveryAddress"
+        type="text"
+        placeholder="Delivery address / area"
+      >
+
+      <input
+        id="deliveryPhone"
+        type="tel"
+        inputmode="tel"
+        placeholder="Phone number for rider"
+      >
+
+    </div>
+
+
+    <!-- Notes -->
+
+    <textarea
+      id="orderNote"
+      rows="3"
+      placeholder="Anything extra? Extra pepper, no onions, etc."
+    ></textarea>
+
+
+    <!-- Total -->
+
+    <div class="cart-total">
+
+      <span>
+        Total
+      </span>
+
+      <span id="cartTotal">
+        ₦0
+      </span>
+
+    </div>
+
+
+    <!-- WhatsApp -->
+
+    <button
+      class="btn whatsapp full"
+      id="whatsappBtn"
+      onclick="sendOrder()"
+      disabled
+    >
+      Send order on WhatsApp
+    </button>
+
+
+    <div class="checkout-note">
+      WhatsApp opens with your order already written.
+      You review it before sending.
+    </div>
+
+  </div>
+
+</aside>
+
+
+
+<script>
+
+/* =========================================================
+   RESTAURANT SETTINGS
+========================================================= */
+
+/*
+   WhatsApp number from the supplied menu:
+   08037485494
+
+   International format:
+   2348037485494
+*/
+
+const PHONE = "2348037485494";
+
+const CURRENCY = "₦";
+
+
+/* =========================================================
+   MENU DATA
+========================================================= */
+
+const PRODUCTS = [
+
+  /* GRILLS */
+
+  {
+    id: "grilled-chicken-full",
+    name: "Grilled Chicken — Full Portion",
+    desc: "Full portion grilled chicken.",
+    price: 12000,
+    cat: "Grills",
+    featured: true,
+    badge: "Grill favourite",
+    image: "balanged.png"
+  },
+
+  {
+    id: "grilled-chicken-half",
+    name: "Grilled Chicken — Half Portion",
+    desc: "Half portion grilled chicken.",
+    price: 6000,
+    cat: "Grills"
+  },
+
+  {
+    id: "local-chicken-full",
+    name: "Local Chicken — Full Portion",
+    desc: "Full portion local chicken.",
+    price: 8000,
+    cat: "Grills"
+  },
+
+  {
+    id: "local-chicken-half",
+    name: "Local Chicken — Half Portion",
+    desc: "Half portion local chicken.",
+    price: 4000,
+    cat: "Grills"
+  },
+
+  {
+    id: "beef-suya",
+    name: "Beef Suya",
+    desc: "Signature beef suya — sold per stick.",
+    price: 2000,
+    cat: "Grills",
+    featured: true,
+    badge: "Signature",
+    image: "a_home1.jpg",
+    unit: "stick"
+  },
+
+  {
+    id: "balangu",
+    name: "Balangu",
+    desc: "Smoky grilled meat — sold per portion.",
+    price: 2000,
+    cat: "Grills",
+    featured: true,
+    badge: "Popular",
+    image: "balangu.png",
+    unit: "portion"
+  },
+
+  {
+    id: "chicken-wings",
+    name: "Chicken Wings",
+    desc: "Seasoned grilled chicken wings.",
+    price: 2000,
+    cat: "Grills"
+  },
+
+
+  /* BURGERS */
+
+  {
+    id: "suya-burger",
+    name: "Classic Suya Burger",
+    desc: "Classic burger with a suya-inspired twist.",
+    price: 5000,
+    cat: "Burgers",
+    image: "https://images.unsplash.com/photo-1541618530-bd0a83a67f76?auto=format&fit=crop&fm=jpg&q=80&w=1000"
+  },
+
+  {
+    id: "chicken-burger",
+    name: "Classic Chicken Burger",
+    desc: "Classic chicken burger.",
+    price: 5000,
+    cat: "Burgers",
+    image: "https://images.unsplash.com/photo-1650553452854-37bf94b82a8e?auto=format&fit=crop&fm=jpg&q=80&w=1000"
+  },
+
+
+  /* BITES & WRAPS */
+
+  {
+    id: "beef-suya-wrap",
+    name: "Beef Suya Wrap",
+    desc: "Beef suya wrapped for an easy bite.",
+    price: 5000,
+    cat: "Bites & Wraps",
+    image: "./a_wrap.jpg"
+  },
+
+  {
+    id: "chicken-suya-wrap",
+    name: "Chicken Suya Wrap",
+    desc: "Chicken suya wrap.",
+    price: 5000,
+    cat: "Bites & Wraps",
+    image: "./a_wrap.jpg"
+  },
+
+
+  /* SIGNATURE MAINS */
+
+  {
+    id: "fried-rice-chicken",
+    name: "Classic Fried Rice with Chicken",
+    desc: "Classic fried rice served with chicken.",
+    price: 6000,
+    cat: "Signature Mains",
+    featured: true,
+    badge: "Favourite",
+    image: "./a_rice.jpg"
+  },
+
+  {
+    id: "fried-rice-beef",
+    name: "Classic Fried Rice with Beef",
+    desc: "Classic fried rice served with beef.",
+    price: 4500,
+    cat: "Signature Mains",
+    image: "./a_rice.jpg"
+  },
+
+  {
+    id: "yg-signature-rice",
+    name: "YG Signature Rice",
+    desc: "YAJI & GRILL signature rice.",
+    price: 4000,
+    cat: "Signature Mains",
+    image: "./a_rice.jpg"
+  },
+
+  {
+    id: "chips-eggs",
+    name: "Chips with Eggs",
+    desc: "Classic chips served with eggs.",
+    price: 3000,
+    cat: "Signature Mains"
+  },
+
+  {
+    id: "signature-noodles",
+    name: "YG Signature Noodles",
+    desc: "YAJI & GRILL signature noodles.",
+    price: 3000,
+    cat: "Signature Mains",
+    image: "./363904.jpg"
+  },
+
+  {
+    id: "fried-yam",
+    name: "Classic Fried Yam",
+    desc: "Crispy classic fried yam.",
+    price: 3500,
+    cat: "Signature Mains"
+  },
+
+  {
+    id: "pasta-beef",
+    name: "Stir Fried Pasta with Beef",
+    desc: "Stir fried pasta with beef.",
+    price: 4000,
+    cat: "Signature Mains"
+  },
+
+  {
+    id: "pasta-chicken",
+    name: "Stir Fried Pasta with Chicken",
+    desc: "Stir fried pasta with chicken.",
+    price: 5000,
+    cat: "Signature Mains"
+  },
+
+  {
+    id: "white-rice-chicken",
+    name: "Classic White Rice with Chicken",
+    desc: "Classic white rice served with chicken.",
+    price: 5500,
+    cat: "Signature Mains"
+  },
+
+  {
+    id: "white-rice-beef",
+    name: "Classic White Rice with Beef",
+    desc: "Classic white rice served with beef.",
+    price: 4500,
+    cat: "Signature Mains"
+  },
+
+
+  /* DRINKS */
+
+  {
+    id: "soda",
+    name: "Soda",
+    desc: "Soft drink.",
+    price: 800,
+    cat: "Drinks"
+  },
+
+  {
+    id: "water",
+    name: "Water 60cl",
+    desc: "Bottled water.",
+    price: 500,
+    cat: "Drinks"
+  },
+
+  {
+    id: "spiced-tea",
+    name: "YG Spiced Tea",
+    desc: "YAJI & GRILL spiced tea.",
+    price: 2000,
+    cat: "Drinks"
+  }
+
+];
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let cart = {};
+
+let orderType = "Pickup";
+
+let activeCategory = "All";
+
+
+/* =========================================================
+   MONEY
+========================================================= */
+
+function money(number) {
+
+  return CURRENCY +
+    Number(number).toLocaleString("en-NG");
+
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+function add(id, amount = 1) {
+
+  cart[id] = (cart[id] || 0) + amount;
+
+  if (cart[id] <= 0) {
+    delete cart[id];
+  }
+
+  renderCart();
+
+}
+
+
+function totalItems() {
+
+  return Object.values(cart)
+    .reduce((total, quantity) => total + quantity, 0);
+
+}
+
+
+function totalPrice() {
+
+  return Object.entries(cart)
+    .reduce((total, [id, quantity]) => {
+
+      const product =
+        PRODUCTS.find(product => product.id === id);
+
+      return total + (product.price * quantity);
+
+    }, 0);
+
+}
+
+
+/* =========================================================
+   FEATURED
+========================================================= */
+
+function renderFeatured() {
+
+  const container =
+    document.getElementById("featuredGrid");
+
+  const products =
+    PRODUCTS.filter(product => product.featured);
+
+  container.innerHTML = products.map(product => {
+
+    const image =
+      product.image ||
+      "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&fm=jpg&q=80&w=1000";
+
+    return `
+
+      <article class="feature-card">
+
+        <div class="feature-image">
+
+          <img
+            src="${image}"
+            alt="${product.name}"
+            loading="lazy"
+          >
+
+          <span class="feature-badge">
+            ${product.badge || "Featured"}
+          </span>
+
+        </div>
+
+
+        <div class="feature-body">
+
+          <h3>
+            ${product.name}
+          </h3>
+
+          <p>
+            ${product.desc}
+          </p>
+
+
+          <div class="feature-bottom">
+
+            <span class="price">
+              ${money(product.price)}
+              ${product.unit ? " / " + product.unit : ""}
+            </span>
+
+            <button
+              class="add-btn"
+              onclick="add('${product.id}')"
+              aria-label="Add ${product.name}"
+            >
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    `;
+
+  }).join("");
+
+}
+
+
+/* =========================================================
+   MENU TABS
+========================================================= */
+
+function renderTabs() {
+
+  const categories = [
+    "All",
+    ...new Set(
+      PRODUCTS.map(product => product.cat)
+    )
+  ];
+
+  document.getElementById("tabs").innerHTML =
+    categories.map(category => `
+
+      <button
+        class="tab ${category === activeCategory ? "active" : ""}"
+        onclick="setCategory('${category}')"
+      >
+        ${category}
+      </button>
+
+    `).join("");
+
+}
+
+
+function setCategory(category) {
+
+  activeCategory = category;
+
+  renderTabs();
+
+  renderMenu();
+
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+function renderMenu() {
+
+  const products =
+    activeCategory === "All"
+      ? PRODUCTS
+      : PRODUCTS.filter(
+          product => product.cat === activeCategory
+        );
+
+
+  document.getElementById("menuGrid").innerHTML =
+    products.map(product => `
+
+      <article class="menu-item">
+
+        <div class="menu-item-main">
+
+          <h3>
+            ${product.name}
+          </h3>
+
+          <p>
+            ${product.desc}
+          </p>
+
+        </div>
+
+
+        <div class="menu-item-side">
+
+          <span class="price">
+            ${money(product.price)}
+          </span>
+
+          <button
+            class="mini-add"
+            onclick="add('${product.id}')"
+          >
+            Add +
+          </button>
+
+        </div>
+
+      </article>
+
+    `).join("");
+
+}
+
+
+/* =========================================================
+   CART RENDER
+========================================================= */
+
+function renderCart() {
+
+  const cartLines =
+    document.getElementById("cartLines");
+
+  const entries =
+    Object.entries(cart);
+
+
+  if (!entries.length) {
+
+    cartLines.innerHTML = `
+
+      <div class="cart-empty">
+
+        <div style="font-size:3rem;">
+          🍢
+        </div>
+
+        <h3>
+          Your order is empty
+        </h3>
+
+        <p>
+          Add something from the menu
+          and your order will appear here.
+        </p>
+
+      </div>
+
+    `;
+
+  } else {
+
+    cartLines.innerHTML =
+      entries.map(([id, quantity]) => {
+
+        const product =
+          PRODUCTS.find(
+            item => item.id === id
+          );
+
+        return `
+
+          <div class="cart-line">
+
+            <div>
+
+              <h4>
+                ${product.name}
+              </h4>
+
+              <small>
+                ${money(product.price)}
+                ${product.unit
+                  ? " / " + product.unit
+                  : ""}
+              </small>
+
+
+              <div class="cart-controls">
+
+                <button
+                  onclick="add('${id}', -1)"
+                >
+                  −
+                </button>
+
+                <output>
+                  ${quantity}
+                </output>
+
+                <button
+                  onclick="add('${id}', 1)"
+                >
+                  +
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <strong>
+              ${money(product.price * quantity)}
+            </strong>
+
+          </div>
+
+        `;
+
+      }).join("");
+
+  }
+
+
+  /* Count */
+
+  const count =
+    totalItems();
+
+  document.getElementById("cartCount")
+    .textContent = count;
+
+
+  document.getElementById("floatText")
+    .textContent =
+      count
+        ? `${count} item${count > 1 ? "s" : ""}`
+        : "Order";
+
+
+  /* Total */
+
+  document.getElementById("cartTotal")
+    .textContent =
+      money(totalPrice());
+
+
+  /* WhatsApp button */
+
+  document.getElementById("whatsappBtn")
+    .disabled = count === 0;
+
+}
+
+
+/* =========================================================
+   OPEN CART
+========================================================= */
+
+function openCart() {
+
+  document
+    .getElementById("cart")
+    .classList.add("open");
+
+  document
+    .querySelector(".cart-overlay")
+    .classList.add("open");
+
+  document.body.style.overflow = "hidden";
+
+}
+
+
+/* =========================================================
+   CLOSE CART
+========================================================= */
+
+function closeCart() {
+
+  document
+    .getElementById("cart")
+    .classList.remove("open");
+
+  document
+    .querySelector(".cart-overlay")
+    .classList.remove("open");
+
+  document.body.style.overflow = "";
+
+}
+
+
+/* =========================================================
+   ORDER TYPE
+========================================================= */
+
+function setOrderType(type, button) {
+
+  orderType = type;
+
+
+  document
+    .querySelectorAll(".choice button")
+    .forEach(item => {
+
+      item.classList.remove("active");
+
+    });
+
+
+  button.classList.add("active");
+
+
+  const pickup =
+    document.getElementById("pickupFields");
+
+  const delivery =
+    document.getElementById("deliveryFields");
+
+
+  if (type === "Pickup") {
+
+    pickup.classList.add("show");
+
+    delivery.classList.remove("show");
+
+  }
+
+
+  if (type === "Delivery") {
+
+    pickup.classList.remove("show");
+
+    delivery.classList.add("show");
+
+  }
+
+}
+
+
+/* =========================================================
+   WHATSAPP ORDER
+========================================================= */
+
+function sendOrder() {
+
+  if (totalItems() === 0) {
+    return;
+  }
+
+
+  const name =
+    document
+      .getElementById("customerName")
+      .value
+      .trim();
+
+
+  const note =
+    document
+      .getElementById("orderNote")
+      .value
+      .trim();
+
+
+  const pickupTime =
+    document
+      .getElementById("pickupTime")
+      .value;
+
+
+  const address =
+    document
+      .getElementById("deliveryAddress")
+      .value
+      .trim();
+
+
+  const deliveryPhone =
+    document
+      .getElementById("deliveryPhone")
+      .value
+      .trim();
+
+
+  let message =
+    "Hello YAJI & GRILL 👋\n\n";
+
+
+  message +=
+    "I'd like to place an order:\n\n";
+
+
+  Object.entries(cart)
+    .forEach(([id, quantity]) => {
+
+      const product =
+        PRODUCTS.find(
+          item => item.id === id
+        );
+
+
+      const lineTotal =
+        product.price * quantity;
+
+
+      message +=
+        `• ${quantity} x ${product.name}`;
+
+
+      if (product.unit) {
+
+        message +=
+          ` (${product.unit})`;
+
+      }
+
+
+      message +=
+        ` — ${money(lineTotal)}\n`;
+
+    });
+
+
+  message +=
+    `\nTotal: ${money(totalPrice())}`;
+
+
+  message +=
+    `\nOrder type: ${orderType}`;
+
+
+  if (name) {
+
+    message +=
+      `\nName: ${name}`;
+
+  }
+
+
+  if (orderType === "Pickup") {
+
+    if (pickupTime) {
+
+      message +=
+        `\nPickup time: ${pickupTime}`;
+
+    }
+
+  }
+
+
+  if (orderType === "Delivery") {
+
+    if (address) {
+
+      message +=
+        `\nDelivery address: ${address}`;
+
+    }
+
+    if (deliveryPhone) {
+
+      message +=
+        `\nRider phone: ${deliveryPhone}`;
+
+    }
+
+  }
+
+
+  if (note) {
+
+    message +=
+      `\nNote: ${note}`;
+
+  }
+
+
+  message +=
+    "\n\nPlease confirm my order and total. Thank you.";
+
+
+  const whatsappURL =
+    "https://wa.me/" +
+    PHONE +
+    "?text=" +
+    encodeURIComponent(message);
+
+
+  window.open(
+    whatsappURL,
+    "_blank",
+    "noopener,noreferrer"
+  );
+
+}
+
+
+/* =========================================================
+   HERO CAROUSEL
+========================================================= */
+
+(function () {
+
+  const slides =
+    document.querySelectorAll(".hero-slide");
+
+  const dots =
+    document.querySelectorAll(".hero-dot");
+
+  const previous =
+    document.querySelector(".hero-prev");
+
+  const next =
+    document.querySelector(".hero-next");
+
+  const hero =
+    document.querySelector(".hero");
+
+
+  let current = 0;
+
+  let timer;
+
+  const INTERVAL = 5500;
+
+
+  function showSlide(index) {
+
+    current =
+      (index + slides.length) %
+      slides.length;
+
+
+    slides.forEach(
+      (slide, i) => {
+
+        slide.classList.toggle(
+          "active",
+          i === current
+        );
+
+      }
+    );
+
+
+    dots.forEach(
+      (dot, i) => {
+
+        dot.classList.toggle(
+          "active",
+          i === current
+        );
+
+      }
+    );
+
+  }
+
+
+  function nextSlide() {
+
+    showSlide(current + 1);
+
+  }
+
+
+  function previousSlide() {
+
+    showSlide(current - 1);
+
+  }
+
+
+  function startCarousel() {
+
+    clearInterval(timer);
+
+    timer =
+      setInterval(
+        nextSlide,
+        INTERVAL
+      );
+
+  }
+
+
+  previous.addEventListener(
+    "click",
+    () => {
+
+      previousSlide();
+
+      startCarousel();
+
+    }
+  );
+
+
+  next.addEventListener(
+    "click",
+    () => {
+
+      nextSlide();
+
+      startCarousel();
+
+    }
+  );
+
+
+  dots.forEach(
+    (dot, index) => {
+
+      dot.addEventListener(
+        "click",
+        () => {
+
+          showSlide(index);
+
+          startCarousel();
+
+        }
+      );
+
+    }
+  );
+
+
+  /* Touch swipe */
+
+  let startX = 0;
+
+
+  hero.addEventListener(
+    "touchstart",
+    event => {
+
+      startX =
+        event.changedTouches[0].screenX;
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  hero.addEventListener(
+    "touchend",
+    event => {
+
+      const endX =
+        event.changedTouches[0].screenX;
+
+      const distance =
+        startX - endX;
+
+
+      if (Math.abs(distance) < 50) {
+        return;
+      }
+
+
+      if (distance > 0) {
+
+        nextSlide();
+
+      } else {
+
+        previousSlide();
+
+      }
+
+
+      startCarousel();
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  /* Pause desktop carousel on hover */
+
+  hero.addEventListener(
+    "mouseenter",
+    () => {
+
+      clearInterval(timer);
+
+    }
+  );
+
+
+  hero.addEventListener(
+    "mouseleave",
+    () => {
+
+      startCarousel();
+
+    }
+  );
+
+
+  showSlide(0);
+
+  startCarousel();
+
+})();
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+document.getElementById("year")
+  .textContent =
+    new Date().getFullYear();
+
+
+/* =========================================================
+   INITIAL RENDER
+========================================================= */
+
+renderFeatured();
+
+renderTabs();
+
+renderMenu();
+
+renderCart();
+
+</script>
+
+</body>
+</html>
